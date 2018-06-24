@@ -6,13 +6,12 @@ import "./App.css";
 
 const randInt = x => Math.floor(Math.random(x))
 
-const shuffle = (arr) => {
-  arr.map((elem, i) => {
+const shuffle = (arr) => arr.map((elem, i) => {
     let randIndex = randInt(i);
     arr[i] = arr[randIndex];
     arr[randIndex] = elem;
+    return arr;
   })
-}
 
 class App extends React.Component{
   state = {
@@ -36,11 +35,11 @@ class App extends React.Component{
     let friends = this.state.friends;
     let currScore;
     let endGame = false;
-    friends = friends.map(elem => {
-      if (elem.id = id) {
+    friends.forEach(elem => {
+      if (elem.id === id) {
         if (!elem.clicked) {
           elem.clicked = true;
-          currScore = friends.currScore + 1;
+          currScore = this.state.currScore + 1;
         }
         else
           endGame = true;
@@ -57,7 +56,7 @@ class App extends React.Component{
     let currState = this.state;
     if (currState.currScore > currState.highScore)
       currState.highScore = currState.currScore;
-    currState.friends = currState.friend.map(elem => (elem.clicked = false));
+    currState.friends.forEach(elem => (elem.clicked = false));
     currState.currScore = 0;
     this.setState(currState);
   }
@@ -72,20 +71,22 @@ class App extends React.Component{
 
   render () {
     return (
-      <Wrapper>
-        <h1 className="title">Friends List</h1>
-        <h2>{this.state.currScore}</h2>
-        <h2>{this.state.highScore}</h2>
-        <hr/>
-        {this.state.friends.map(elem => (
-          <FriendCard
-            updateClick={this.updateClick}
-            name={elem.name}
-            image={elem.image}
-            key={elem.id}
-          />
-        ))}
-      </Wrapper>)
+      <div>
+          <h1 className="title">Friends List</h1>
+          <h2>Current Score: {this.state.currScore}</h2>
+          <h2>High Score: {this.state.highScore}</h2>
+          <hr/>
+        <Wrapper>
+          {this.state.friends.map((elem, i) => (
+            <FriendCard
+              updateClick={this.updateClick}
+              image={elem.image}
+              key={i}
+              id={elem.id}
+            />
+          ))}
+        </Wrapper>
+      </div>)
   };
 }
 
