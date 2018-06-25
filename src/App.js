@@ -1,6 +1,7 @@
 import React from "react";
 import FriendCard from "./components/FriendCard";
 import Wrapper from "./components/Wrapper";
+import Navbar from "./components/Navbar"
 import friends from "./friends.json";
 import "./App.css";
 
@@ -17,7 +18,8 @@ class App extends React.Component{
   state = {
     friends,
     currScore: 0,
-    highScore: 0
+    highScore: 0,
+    playing: false,
   };
 
   addScore = () => {
@@ -72,19 +74,24 @@ class App extends React.Component{
   render () {
     return (
       <div>
-          <h1 className="title">Friends List</h1>
-          <h2>Current Score: {this.state.currScore}</h2>
-          <h2>High Score: {this.state.highScore}</h2>
-          <hr/>
+        <Navbar 
+          currScore={this.state.currScore}
+          highScore={this.state.highScore}
+          resetGame={this.endGame}
+        />
         <Wrapper>
-          {this.state.friends.map((elem, i) => (
-            <FriendCard
-              updateClick={this.updateClick}
-              image={elem.image}
-              key={i}
-              id={elem.id}
-            />
-          ))}
+          {this.state.friends.map((elem, i) => 
+            (i < 9 ?
+              <FriendCard
+                updateClick={this.updateClick}
+                image={elem.image}
+                key={i}
+                id={elem.id}
+              />
+              :
+              ""
+            )
+          )}
         </Wrapper>
       </div>)
   };
