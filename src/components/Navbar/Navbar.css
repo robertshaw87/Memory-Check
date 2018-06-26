@@ -1,14 +1,27 @@
 .navbar {
-  background-color: rgba(230, 230, 170, .95);
+  background-color: rgba(200, 200, 215, .95);
 }
 
 .navbar .card {
   background-color: rgba(100, 100, 100, .8);
   color: rgb(220, 220, 220);
+  width: 170px;
 }
 
 .navbar img {
   height: 65px;
   animation-iteration-count: infinite;
   animation-duration: 1.8s;
+}
+
+.navbar .btn-dark {
+  color: rgb(210, 210, 210) !important;
+}
+
+.navbar .score-wrapper{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-content: flex-start;
+  width: inherit;
 }

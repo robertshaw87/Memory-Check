@@ -49,7 +49,7 @@ class App extends React.Component{
       }
     });
     shuffle(friends);
-    if (endGame || this.state.currScore === this.state.friends.length) {
+    if (endGame || this.state.currScore >= this.state.friends.length) {
       this.endGame();
     } else
       this.setState({friends, currScore});
@@ -123,7 +123,7 @@ class App extends React.Component{
                 id={elem.id}
               />
               :
-              ""
+              null
             )
           )}
         </Wrapper>
