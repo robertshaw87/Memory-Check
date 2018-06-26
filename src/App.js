@@ -20,7 +20,7 @@ class App extends React.Component{
     friends,
     currScore: 0,
     highScore: 0,
-    playing: false,
+    playing: true,
   };
 
   addScore = () => {
@@ -55,14 +55,16 @@ class App extends React.Component{
       this.setState({friends, currScore});
   }
   
-  resetGame = () => {
-    let currState = this.state;
-    if (currState.currScore > currState.highScore)
-      currState.highScore = currState.currScore;
-    currState.friends.forEach(elem => (elem.clicked = false));
-    currState.currScore = 0;
-    currState.playing = true;
-    this.setState(currState);
+  resetGame = (event) => {
+    if(event.target === event.currentTarget) {
+      let currState = this.state;
+      if (currState.currScore > currState.highScore)
+        currState.highScore = currState.currScore;
+      currState.friends.forEach(elem => (elem.clicked = false));
+      currState.currScore = 0;
+      currState.playing = true;
+      this.setState(currState);
+    }
   }
 
   endGame = () => {

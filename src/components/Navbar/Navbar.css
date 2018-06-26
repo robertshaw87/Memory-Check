@@ -1,3 +1,14 @@
 .navbar {
-  background-color: #e6e6e6;
+  background-color: rgba(230, 230, 170, .95);
+}
+
+.navbar .card {
+  background-color: rgba(100, 100, 100, .8);
+  color: rgb(220, 220, 220);
+}
+
+.navbar img {
+  height: 65px;
+  animation-iteration-count: infinite;
+  animation-duration: 1.8s;
 }

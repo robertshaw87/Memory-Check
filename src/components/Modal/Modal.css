@@ -9,13 +9,19 @@
 
 .modal-content {
   z-index: 9001;
-  min-width: 50%;
+  background-color: rgba(20, 20, 30, .95);
+  color: rgb(220, 220, 220);
+  width: 50%;
   margin: 15% auto;
+}
+
+.modal-content .btn-outline-secondary {
+  color: rgb(220, 220, 220) !important;
 }
 
 @media (max-width: 767.98px) {
   .modal-content {
     margin: 15% auto;
-    min-width: 80%;
+    width: 80%;
   }
 }
