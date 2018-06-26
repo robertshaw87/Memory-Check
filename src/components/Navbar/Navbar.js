@@ -4,7 +4,7 @@ import "./Navbar.css";
 const Navbar = props => (
   <nav className="navbar navbar-light mb-3">
     <span className="navbar-brand py-0 mb-0">
-      <span><img src="./images/brain.png" alt="Brain" className="animated bounce mr-2 d-none d-md-inline-block"/></span>
+      <span><img src="../../images/brain.png" alt="Brain" className="animated bounce mr-2 d-none d-md-inline-block"/></span>
       <span className="brand-text">Memory Game</span>
     </span>
     <span className="score-display mb-2 m-0 mx-sm-5">
