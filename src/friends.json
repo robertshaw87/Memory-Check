@@ -1,77 +1,77 @@
 [
   {
     "id": 1,
-    "image": "../../images/Bee1.gif",
+    "image": "../images/Bee1.gif",
     "clicked": false
   },
   {
     "id": 2,
-    "image": "../../images/Cat1.gif",
+    "image": "../images/Cat1.gif",
     "clicked": false
   },
   {
     "id": 3,
-    "image": "../../images/Cat2.gif",
+    "image": "../images/Cat2.gif",
     "clicked": false
   },
   {
     "id": 4,
-    "image": "../../images/Cat3.gif",
+    "image": "../images/Cat3.gif",
     "clicked": false
   },
   {
     "id": 5,
-    "image": "../../images/Cat4.gif",
+    "image": "../images/Cat4.gif",
     "clicked": false
   },
   {
     "id": 6,
-    "image": "../../images/Cat5.gif",
+    "image": "../images/Cat5.gif",
     "clicked": false
   },
   {
     "id": 7,
-    "image": "../../images/Dog1.gif",
+    "image": "../images/Dog1.gif",
     "clicked": false
   },
   {
     "id": 8,
-    "image": "../../images/Dog2.gif",
+    "image": "../images/Dog2.gif",
     "clicked": false
   },
   {
     "id": 9,
-    "image": "../../images/Dog3.gif",
+    "image": "../images/Dog3.gif",
     "clicked": false
   },
   {
     "id": 10,
-    "image": "../../images/Dog4.gif",
+    "image": "../images/Dog4.gif",
     "clicked": false
   },
   {
     "id": 11,
-    "image": "../../images/Dog5.gif",
+    "image": "../images/Dog5.gif",
     "clicked": false
   },
   {
     "id": 12,
-    "image": "../../images/Dog6.gif",
+    "image": "../images/Dog6.gif",
     "clicked": false
   },
   {
     "id": 13,
-    "image": "../../images/Dog7.gif",
+    "image": "../images/Dog7.gif",
     "clicked": false
   },
   {
     "id": 14,
-    "image": "../../images/Dog8.gif",
+    "image": "../images/Dog8.gif",
     "clicked": false
   },
   {
     "id": 15,
-    "image": "../../images/Turkey1.gif",
+    "image": "../images/Turkey1.gif",
     "clicked": false
   }
 ]
