@@ -1,31 +1,21 @@
-.card {
-  /* height: 180px;
-  width: 180px; */
-  background-color: beige;
-  overflow: hidden;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  max-width: 180px;
+.modal-background {
+  z-index: 9000;
+  background-color: rgb(100,100,100);
+  background-color: rgba(100,100,100,.8); /* Black w/ opacity */
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
 }
 
-.placeholder {
-  height: 0;
-  padding-bottom: 100%;
+.modal-content {
+  z-index: 9001;
+  min-width: 50%;
+  margin: 15% auto;
 }
 
-.card {
-
-}
-
-.card:hover {
-  animation-name: pulse;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-}
-
-@keyframes pulse {
-  50% {
-   transform: scale(1.02);
+@media (max-width: 767.98px) {
+  .modal-content {
+    margin: 15% auto;
+    min-width: 80%;
   }
 }

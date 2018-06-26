@@ -1,12 +1,7 @@
 .card {
   /* height: 180px;
   width: 180px; */
-  background-color: beige;
-  overflow: hidden;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  max-width: 180px;
+
 }
 
 .placeholder {
@@ -18,14 +13,16 @@
 
 }
 
-.card:hover {
-  animation-name: pulse;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
+.friend-card {
+  animation-duration: .5s;
+  background-color: beige;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  max-width: 180px;
 }
 
-@keyframes pulse {
-  50% {
-   transform: scale(1.02);
-  }
+.friend-card:hover {
+  animation-name: pulse;
 }

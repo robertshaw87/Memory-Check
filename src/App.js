@@ -1,7 +1,8 @@
 import React from "react";
 import FriendCard from "./components/FriendCard";
 import Wrapper from "./components/Wrapper";
-import Navbar from "./components/Navbar"
+import Navbar from "./components/Navbar";
+import Modal from "./components/Modal";
 import friends from "./friends.json";
 import "./App.css";
 
@@ -48,19 +49,25 @@ class App extends React.Component{
       }
     });
     shuffle(friends);
-    if (endGame) {
+    if (endGame || this.state.currScore === this.state.friends.length) {
       this.endGame();
     } else
       this.setState({friends, currScore});
   }
   
-  endGame = () => {
+  resetGame = () => {
     let currState = this.state;
     if (currState.currScore > currState.highScore)
       currState.highScore = currState.currScore;
     currState.friends.forEach(elem => (elem.clicked = false));
     currState.currScore = 0;
+    currState.playing = true;
     this.setState(currState);
+  }
+
+  endGame = () => {
+    let playing = false;
+    this.setState({playing}); 
   }
 
   removeFriend = id => {
@@ -93,6 +100,12 @@ class App extends React.Component{
   render () {
     return (
       <div>
+        {!this.state.playing && 
+          <Modal
+            currScore={this.state.currScore}
+            highScore={this.state.highScore}
+            leaveModal={this.resetGame}
+          />}
         <Navbar 
           currScore={this.state.currScore}
           highScore={this.state.highScore}
