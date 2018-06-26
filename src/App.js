@@ -5,9 +5,9 @@ import Navbar from "./components/Navbar"
 import friends from "./friends.json";
 import "./App.css";
 
-const randInt = x => Math.floor(Math.random(x))
+const randInt = x => Math.floor(Math.random() * x)
 
-const shuffle = (arr) => arr.map((elem, i) => {
+const shuffle = (arr) => arr.forEach((elem, i) => {
     let randIndex = randInt(i);
     arr[i] = arr[randIndex];
     arr[randIndex] = elem;
@@ -71,6 +71,25 @@ class App extends React.Component{
     }
   };
 
+  // filter the friends array in order to 
+  selectFriends = () => {
+    let friends = this.state.friends;
+    let unclickedAvailable = false;
+    friends.forEach((elem, i) => {
+      if (!unclickedAvailable) {
+        if (i < 9 && !elem.clicked) {
+          unclickedAvailable = true;
+        } else if (i > 9 && !elem.clicked) {
+          unclickedAvailable = true;
+          let randIndex = randInt(9);
+          friends[i] = friends[randIndex];
+          friends[randIndex] = elem;
+        }
+      }
+    })
+    return friends
+  }
+
   render () {
     return (
       <div>
@@ -80,7 +99,7 @@ class App extends React.Component{
           resetGame={this.endGame}
         />
         <Wrapper>
-          {this.state.friends.map((elem, i) => 
+          {this.selectFriends().map((elem, i) => 
             (i < 9 ?
               <FriendCard
                 updateClick={this.updateClick}

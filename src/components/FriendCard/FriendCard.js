@@ -2,9 +2,9 @@ import React from "react";
 import "./FriendCard.css";
 
 const FriendCard = props => (
-  <div className="col-4 text-center">
-    <div className="card m-2" onClick={() => props.updateClick(props.id)} >
-        <img className="card-img-top" alt={props.name} src={props.image} />
+  <div className="col-4 px-1 p-md-2 text-center">
+    <div className="card my-2" style={{backgroundImage: `url(${props.image})`}} onClick={() => props.updateClick(props.id)} >
+        <div className="placeholder"></div>
     </div>
   </div>
 );
