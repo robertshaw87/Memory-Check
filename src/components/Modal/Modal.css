@@ -12,7 +12,17 @@
   background-color: rgba(20, 20, 30, .95);
   color: rgb(220, 220, 220);
   width: 50%;
-  margin: 15% auto;
+  margin: 10% auto;
+}
+
+.modal-content, .modal-content p {
+  font-family: 'Cinzel', serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.modal-content .btn-outline-secondary {
+  font-family: 'Righteous', cursive;
 }
 
 .modal-content .btn-outline-secondary {
