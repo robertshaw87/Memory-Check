@@ -7,7 +7,11 @@ Your score increases with each character you click on, but be careful! If you've
 
 Open up the [project link](https://robertshaw87.github.io/memory-check) and you should be able to see the webpage shown below:
 
-![Memory Checker](public/assets/images/readme.gif "Memory Checker")
+![Memory Checker](public/images/readme.gif "Memory Checker")
+
+Simply start clicking on the images to begin playing! You will be scored based on how many images you managed to click on before you click on one you've already chosen.
+
+Try to select all 15 images without repeats and beat the game!
 
 ### Prerequisites
 
